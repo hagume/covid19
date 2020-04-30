@@ -4,76 +4,130 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ受診相談窓口（日本語のみ）')
+            $t('感染が疑われる方の電話相談窓口')
           }}</span>
-        </div>
-        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          {{ $t('帰国者・接触者 電話相談センター') }}
-        </div>
-        <div>
-          <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
-            <span :class="$style.AdvisoryWhiteBoxSentense">
-              {{ $t('24時間対応') }}
-            </span>
-          </div>
         </div>
       </div>
 
       <div :class="$style.AdvisoryContents">
-        <div class="py-8">
-          <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（日中）') }}
-          </div>
+        <!-- <div :class="[$style.AdvisoryContentsTitle2, 'mt-4']"> -->
+        <div :class="[$style.AdvisoryContentsTitle2]">
+          {{ $t('コールセンター') }}
+        </div>
+
+        <div
+          :class="[
+            $style.AdvisoryWhiteBox,
+            $style.AdvisoryBoxContainer,
+            $style.AdvisoryLink,
+            $style.AdvisoryBlockCentering,
+            'mt-4'
+          ]"
+        >
+            <img
+              :class="$style.AdvisoryTelephoneIcon"
+              src="/flow/phone-24px.svg"
+              aria-hidden="true"
+            />
+            <span :class="$style.AdvisoryWhiteBoxSentense">
+              {{ $t('0570-052-092') }}
+            </span>
+        </div>
+
+        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
+          {{ $t('24時間（土日、祝日を含む)') }}
+        </div>
+      </div>
+
+      <div :class="$style.AdvisoryContents">
+        <!-- <div :class="[$style.AdvisoryContentsTitle2, 'mt-4']"> -->
+        <div :class="[$style.AdvisoryContentsTitle2]">
+          {{ $t('日本語以外での相談を希望される方') }}
+        </div>
+
+        <div
+          :class="[
+            $style.AdvisoryWhiteBox,
+            $style.AdvisoryBoxContainer,
+            $style.AdvisoryLink,
+            $style.AdvisoryBlockCentering,
+            'mt-4'
+          ]"
+        >
+        <a
+          href="http://tia21.or.jp/hello.html"
+          target="_blank"
+          rel="noopener"
+        >
+            <span :class="$style.AdvisoryWhiteBoxSentense">
+              {{ $t('とちぎ外国人相談サポートセンター') }}
+            </span>
+        </a>
+        </div>
+      </div>
+
+      <div :class="$style.AdvisoryContents">
+        <!-- <div :class="[$style.AdvisoryContentsTitle2, 'mt-4']"> -->
+        <div :class="[$style.AdvisoryContentsTitle2]">
+          {{ $t('聴覚等に障害のある方') }}
+        </div>
+
+        <div
+          :class="[
+            $style.AdvisoryWhiteBox,
+            $style.AdvisoryBoxContainer,
+            $style.AdvisoryLink,
+            $style.AdvisoryBlockCentering,
+            'mt-4'
+          ]"
+        >
+        <a
+          href="http://www.pref.tochigi.lg.jp/e04/welfare/hoken-eisei/kansen/hp/shingatakoronavirussoudannmadoguti.html#tyoukaku"
+          target="_blank"
+          rel="noopener"
+        >
+            <span :class="$style.AdvisoryWhiteBoxSentense">
+              {{ $t('聴覚障害等のある方の相談窓口') }}
+            </span>
+        </a>
+        </div>
+      </div>
+
+
+      <div :class="$style.AdvisoryContents">
+        <!-- <div class="py-8"> -->
+        <div>
           <div
             :class="[
+              $style.AdvisoryWhiteBox,
+              $style.AdvisoryBoxContainer,
               $style.AdvisoryLink,
               $style.AdvisoryBlockCentering,
               'mt-4'
             ]"
           >
             <a
-              href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+              href="http://www.pref.tochigi.lg.jp/e04/welfare/hoken-eisei/kansen/hp/shingatakoronavirussoudannmadoguti.html#utagai"
               target="_blank"
               rel="noopener"
             >
-              <span>{{ $t('各保健所の電話番号は福祉保健局HPへ') }}</span>
+              <img
+                :class="$style.AdvisoryTelephoneIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+              />
+              <span :class="$style.AdvisoryWhiteBoxSentense">
+                {{ $t('管轄ごとの連絡先はこちら') }}
+              </span>
               <v-icon size="18">
                 mdi-open-in-new
               </v-icon>
             </a>
           </div>
+          <!-- <span>{{ $t('平日夜間、休日については折り返し等の対応') }}</span> -->
         </div>
       </div>
 
-      <div :class="$style.AdvisoryContents">
-        <div class="pt-8">
-          <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（夜間）') }}
-          </div>
-          <span>{{ $t('午後5時から翌朝午前9時') }}</span>
-        </div>
-        <div class="mt-1">
-          <span :class="$style.AdvisoryContentsSubTitle">
-            {{ $t('土日祝 終日') }}
-          </span>
-        </div>
-        <div
-          :class="[
-            $style.AdvisoryTelephoneArea,
-            $style.AdvisoryBlockCentering,
-            'mt-1'
-          ]"
-        >
-          <a :class="$style.AdvisoryTelephone" href="tel:0353204592">
-            <img
-              :class="$style.AdvisoryTelephoneIcon"
-              src="/flow/phone-24px.svg"
-              aria-hidden="true"
-            />
-            03-5320-4592
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -89,7 +143,7 @@
     background-color: $gray-5;
     border-radius: 4px;
     height: 100%;
-    padding: 30px 20px 20px 20px;
+    padding: 90px 20px 20px 20px;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -158,7 +212,6 @@
   }
   &WhiteBox {
     background-color: $white;
-    width: 160px;
     padding: 10px;
     &Sentense {
       color: $green-1;
